@@ -10,11 +10,11 @@ Der vollständige Prompt aus dem Post – direkt einsetzbar.
 
 | Datei | Beschreibung |
 |-------|-------------|
-| [`prompts/conversation-history-analysis.md`](./prompts/conversation-history-analysis.md) | Analysiert deine ChatGPT-Gesprächshistorie und baut daraus eine strukturierte Wissensdatenbank für Claude |
+| [`conversation-history-analysis.md`](./conversation-history-analysis.md) | Analysiert deine ChatGPT-Gesprächshistorie und baut daraus eine strukturierte Wissensdatenbank für Claude |
 
 ## Wie nutzen
 
 1. Exportiere deine ChatGPT-Gesprächshistorie (Einstellungen → Daten exportieren → `chat.html`)
 2. Öffne Claude und lade die `chat.html` als Datei hoch
-3. Füge den Prompt aus [`prompts/conversation-history-analysis.md`](./prompts/conversation-history-analysis.md) ein
+3. Füge den Prompt aus [`conversation-history-analysis.md`](./conversation-history-analysis.md) ein
 4. Speichere den Output als Projektkontext in Claude Projects
