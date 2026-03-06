@@ -1,0 +1,63 @@
+# ============================================================
+# PRIVATER INHALT
+# ============================================================
+# Der Ordner private/ ist für lokale Anpassungen gedacht:
+# - Prompts mit echten Firmendaten
+# - Agenten-Konfigurationen mit unternehmensspezifischen Infos
+# - Persönliche Notizen und Experimente
+# Dieser Inhalt bleibt IMMER lokal und kommt nie ins Repo.
+private/
+
+# ============================================================
+# UMGEBUNGSVARIABLEN & SECRETS
+# ============================================================
+# Niemals API-Keys, Tokens oder Passwörter committen
+*.env
+.env
+.env.local
+.env.*.local
+
+# ============================================================
+# BETRIEBSSYSTEM
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ============================================================
+# EDITOREN & IDES
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# ============================================================
+# NODE / JAVASCRIPT (falls Tools hinzukommen)
+# ============================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================
+# PYTHON (falls Skripte hinzukommen)
+# ============================================================
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ============================================================
+# LOGS & TEMPORÄRE DATEIEN
+# ============================================================
+*.log
+*.tmp
+.cache/
