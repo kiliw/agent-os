@@ -16,6 +16,7 @@ Moderne KI-Modelle sind leistungsfähig genug, um strategische und operative Unt
 
 Statt jedes Mal von vorne zu beginnen, kannst du auf erprobte Bausteine zurückgreifen:
 
+- **Infrastruktur** – Setup-Guides um LLMs zentral für Teams bereitzustellen (Phase 0)
 - **Prompts** – sofort einsetzbare Vorlagen für typische Business-Aufgaben
 - **Agenten** – spezialisierte KI-Rollen mit klaren Verantwortlichkeiten (CEO, Research, Operations, Marketing)
 - **Workflows** – Schritt-für-Schritt-Anleitungen, wie mehrere Agenten zusammenspielen
@@ -29,6 +30,8 @@ Agent OS ist kein Tool das man installiert. Es ist ein System das man versteht, 
 
 ```
 agent-os/
+├── infrastructure/ # Setup-Guides: LLM-Infrastruktur für Teams
+│   └── corporate-llm-workspace/
 ├── posts/          # Begleitmaterial zu Blog-Posts (Prompts, Beispiele)
 ├── agents/         # Spezialisierte KI-Agenten-Definitionen
 │   ├── ceo-agent/
@@ -46,6 +49,14 @@ agent-os/
 ---
 
 ## Schnellstart
+
+**Option 0: LLM-Workspace für dein Team einrichten**
+
+Bevor Mitarbeiter Agenten nutzen können, brauchen sie Zugang zu LLMs. Das [`corporate-llm-workspace`](./infrastructure/corporate-llm-workspace/) Setup gibt deinem Team eine zentrale, selbst gehostete Oberfläche mit Microsoft SSO und Zugriff auf alle großen Modelle über einen API-Key.
+
+→ [`infrastructure/corporate-llm-workspace/`](./infrastructure/corporate-llm-workspace/)
+
+---
 
 **Option 1: Einzelnen Prompt nutzen**
 
