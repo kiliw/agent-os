@@ -142,3 +142,7 @@ Statt direkt OpenAI- oder Anthropic-API-Keys zu hinterlegen, nutze [Requesty](ht
 |-------|-------------|
 | [`docker-compose.yml`](./docker-compose.yml) | Vollständige Docker-Konfiguration mit Platzhaltern |
 | [`Caddyfile`](./Caddyfile) | Reverse-Proxy-Konfiguration (Template) |
+
+---
+
+*Basiert u. a. auf dem Tutorial von [Everlast AI](https://www.youtube.com/watch?v=uv0fL2nEtSI).*
