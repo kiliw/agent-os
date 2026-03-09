@@ -145,4 +145,4 @@ Statt direkt OpenAI- oder Anthropic-API-Keys zu hinterlegen, nutze [Requesty](ht
 
 ---
 
-*Basiert u. a. auf dem Tutorial von [Everlast AI](https://www.youtube.com/watch?v=uv0fL2nEtSI).*
+*Basiert u. a. auf dem Tutorial von [Everlast AI](https://www.youtube.com/watch?v=uv0fL2nEtSI) – ein empfehlenswerter Kanal um bei KI allgemein up to date zu bleiben.*
