@@ -1,0 +1,53 @@
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    environment:
+      - WEBUI_AUTH=True
+      - ENABLE_OAUTH_SIGNUP=True
+      - OAUTH_MERGE_ACCOUNTS_BY_EMAIL=True
+      - MICROSOFT_REDIRECT_URI=https://{DEINE.DOMAIN.DE}/oauth/microsoft/callback
+      - MICROSOFT_CLIENT_ID={MICROSOFT_CLIENT_ID}
+      - MICROSOFT_CLIENT_SECRET={MICROSOFT_CLIENT_SECRET}
+      - MICROSOFT_CLIENT_TENANT_ID={MICROSOFT_CLIENT_TENANT_ID}
+      - OPENID_PROVIDER_URL=https://login.microsoftonline.com/{MICROSOFT_CLIENT_TENANT_ID}/v2.0/.well-known/openid-configuration
+    volumes:
+      - openwebui-data:/app/backend/data
+    expose:
+      - "8080"
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - open-webui
+    restart: unless-stopped
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_LABEL_ENABLE=true
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_NO_STARTUP_MESSAGE=true
+      - TZ=UTC
+      # Täglich um 4:15 Uhr UTC auf Updates prüfen
+      - "WATCHTOWER_SCHEDULE=0 15 4 * * *"
+
+volumes:
+  openwebui-data:
+  caddy_data:
+  caddy_config:

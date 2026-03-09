@@ -1,0 +1,4 @@
+# Platzhalter ersetzen: {DEINE.DOMAIN.DE} → z. B. workspace.deinedomain.de
+{DEINE.DOMAIN.DE} {
+    reverse_proxy open-webui:8080
+}
