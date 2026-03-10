@@ -2,6 +2,7 @@
 
 > **LinkedIn Post:** [Link einfügen]
 > **Thema:** Infrastruktur · LLM-Zugang für Teams
+> **Vollständige Anleitung + Config-Dateien:** [`infrastructure/corporate-llm-workspace/`](../../infrastructure/corporate-llm-workspace/)
 
 ## Was ist das?
 
